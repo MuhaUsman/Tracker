@@ -6,14 +6,18 @@ import datetime
 # Hide Streamlit menu and deploy button
 st.set_page_config(page_title="DROOD and AYTA-E-KARIMA Tracker", menu_items=None)
 
-# CSS to hide the menu button and deploy button
-hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        </style>
-        """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
+# CSS to hide Streamlit branding, GitHub, and menu buttons
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stDeployButton {display:none;}
+    iframe[title="streamlit_broadcast"] {display: none;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 
 # Database setup
 # Database setup
